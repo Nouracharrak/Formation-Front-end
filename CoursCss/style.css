@@ -3,6 +3,11 @@
     font-family: "DMSerif";
     src: url(assets/fonts/DMSerifDisplay-Regular.ttf)
 }
+/* l'etoile  donne le style à tout les elements */
+/* * {
+    margin: 0;
+    padding: 0;
+} */
 
 body{
     font-family: "DMSerif", Verdana;
@@ -19,3 +24,94 @@ h1{
     text-shadow: 6px 3px 8px #0000006e;
     color: rgb(225, 151, 151)
 }
+
+main{
+    height: 100%;
+    width: 90%;
+    /* centrer une boite */
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 30px ;
+    background: rgba(171, 155, 155, 0.47);
+    box-shadow: 0px, 0px, 20px, 4px rgb(181, 163, 163);
+    padding: 15px;
+}
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.flexbox, 
+.grid {
+    border : 2px solid rgb(201, 87, 97);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+/* flexbox sert a repartir les elements equitiblement sur une pasge */
+.flexbox ul{
+    padding:0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.flexbox li{
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: #ba80166e;
+    /* centrer un seul element verticalement ou horizontalalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+  
+  .grid img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "i1 i2"
+      "ta ta"
+      "vi bt";
+  }
+  
+  input,
+  textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: "DMSerif";
+    border-radius: 5px;
+  }
+  
+  textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+  }
+  
+  #btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.2s;
+  }
+  
+  #btn-submit:hover {
+    background: darkblue;
+    color: white;
+  }
