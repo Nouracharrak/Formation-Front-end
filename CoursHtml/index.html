@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours HTML de Zéro</title>
+    <link rel="shortcut icon" href="logo-head.png" />
+  </head>
+  <body>
+    <nav>
+      <!-- ul veut dire unordered list -->
+      <ul>
+        <li>Accueil</li>
+        <li>Boutique</li>
+        <li> <a href="#formulaire">Formulaire</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Ceci c'est un titre principal</h1>
+      <p>
+        Coucou en classique <em> ca va ? en italique </em>
+        <strong> text en gras</strong>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla soluta
+        eligendi laudantium repellat adipisci est neque nihil tempora,
+        recusandae veritatis labore quis omnis illo eaque, culpa eos, voluptas
+        eum molestias.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>Ordered List</h2>
+        <ol>
+          <li>list 1</li>
+          <li>list 2</li>
+          <li>list 3</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Image en HTML</h3>
+        <!-- alt c'est le text qui va etre afficher pour les gens mal voyants (accessibilié) -->
+        <img src="coverImg.png" width="200" height="200" alt="image section" />
+      </section>
+      <section>
+        <div>
+          <h4>Tableaux</h4>
+          <!-- https://www.w3schools.com/html/html_table_colspan_rowspan.asp -->
+          <table border="4" cellpadding="10" cellspacing="4">
+            <thead>
+              <!-- tr pour table row -->
+              <tr>
+                <th>COl1</th>
+                <th>COl2</th>
+                <th>COl3</th>
+                <th>COl4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+              </tr>
+              <tr>
+                <td>Cell 5</td>
+                <td>Cell 6</td>
+                <td>Cell 7</td>
+                <td>Cell 8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h5><i> &#8594;</i>Les liens</h5>
+          <!-- _blank est utile pour nous deriger vers un autre onglet et ne nous pas penilaser en perdant les visiteurs puisque ils vont quiter notre page -->
+          <a href="https://htmlcheatsheet.com" target="_blank">
+            Html Cheat Sheet</a
+          >
+        </div>
+        <div>
+          <h6><i>&#9829;</i>Vidéos</h6>
+          <video
+            src="./219381_small.mp4"
+            height="150"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+      </section>
+      <section id="formulaire">
+        <h2>Les formulaires</h2>
+        <form action="">
+          <!-- for ey id permet de lier le label a l'id -->
+          <label for="name"> Nom</label>
+          <input type="text" id="name" placeholder="Votre Nom" />
+          <br />
+          <label for="age"> Nom</label>
+          <input type="number" id="age" placeholder="Votre Age" value="18" />
+          <br />
+          <label for="gender"></label>
+          <select id="gender">
+            <option value="Homme">Homme</option>
+            <option selected="selected" value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <div>
+            <label for="human"> Humain</label>
+            <input type="radio" name="type" id="human" />
+            <label for="dog"> Chien</label>
+            <input type="radio" name="type" id="dog" />
+            <label for="cat"> chat</label>
+            <input type="radio" name="type" id="cat" />
+          </div>
+          <div>
+            <label for="human"> Humain</label>
+            <input type="checkbox" name="type" id="human" />
+            <label for="dog"> Chien</label>
+            <input type="checkbox" name="type" id="dog" />
+            <label for="cat"> chat</label>
+            <input type="checkbox" name="type" id="cat" />
+          </div>
+          <textarea placeholder="Votre Message" cols="20" row="5"></textarea>
+          <br>
+          <input type="checkbox" id="cgv">
+          <label for="cgv"> Acceptez les conditions Generales</label>
+
+        </form>
+
+        <button type="submit"> Valider</button>
+      </section>
+    </main>
+    <!-- mails et envoi de fichiers -->
+    <footer>
+        <a href="mailto: charrak.nora95@gmail.com"> Contactez moi !</a> <br>
+        <a href="notice.txt" download="Notice"> Telecharger la notice</a>
+
+
+
+    </footer>
+  </body>
+</html>
